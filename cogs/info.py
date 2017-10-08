@@ -2,10 +2,9 @@ import discord
 import time, datetime
 from discord.ext import commands
 
-class UtilityCog:
+class Utility:
     def __init__(self, bot):
         self.bot = bot
-        type(self).__name__ = 'Utility/Info'
     
     @commands.command()
     async def hello(self, ctx):
@@ -33,4 +32,4 @@ class UtilityCog:
             raise SystemExit
 
 def setup(bot):
-    bot.add_cog(UtilityCog(bot))
+    bot.add_cog(Utility(bot))
